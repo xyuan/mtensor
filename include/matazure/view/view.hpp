@@ -7,13 +7,13 @@
 #include <matazure/view/eye.hpp>
 #include <matazure/view/gather.hpp>
 #include <matazure/view/map.hpp>
-#include <matazure/view/meshgrid.hpp>
 #include <matazure/view/ones.hpp>
 #include <matazure/view/permute.hpp>
 #include <matazure/view/slice.hpp>
 #include <matazure/view/stride.hpp>
 #include <matazure/view/zeros.hpp>
 #ifndef MATAZURE_CUDA
+#include <matazure/view/meshgrid.hpp>
 #include <matazure/view/zip.hpp>
 #else
 // #ifndef MATAZURE_CUDA
