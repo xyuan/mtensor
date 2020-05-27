@@ -72,6 +72,7 @@ inline void bm_tensor_view_gather_scalar_axis1(benchmark::State& state) {
     state.SetItemsProcessed(state.iterations() * ts_dst.size());
 }
 
+#ifndef MATAZURE_CUDA
 template <typename tensor_type>
 inline void bm_tensor_view_zip2(benchmark::State& state) {
     tensor_type ts0(pointi<tensor_type::rank>::all(state.range(0)));
@@ -93,6 +94,7 @@ inline void bm_tensor_view_zip2(benchmark::State& state) {
                             sizeof(typename tensor_tuple_type::value_type));
     state.SetItemsProcessed(state.iterations() * ts_dst.size());
 }
+#endif
 
 template <typename tensor_type>
 inline void bm_tensor_view_eye(benchmark::State& state) {

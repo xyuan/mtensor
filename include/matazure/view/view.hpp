@@ -16,7 +16,7 @@
 #ifndef MATAZURE_CUDA
 #include <matazure/view/zip.hpp>
 #else
-#ifdef __CUDACC_RELAXED_CONSTEXPR__
-#include <matazure/view/zip.hpp>
-#endif
+// #ifndef MATAZURE_CUDA
+// #include <matazure/view/zip.hpp>
+// #endif
 #endif
