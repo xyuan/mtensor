@@ -13,8 +13,9 @@ auto bm_cuda_tensor2f_view_gather_scalar_axis1 =
     bm_tensor_view_gather_scalar_axis1<cuda::tensor<float, 2>>;
 BENCHMARK(bm_cuda_tensor2f_view_gather_scalar_axis1)->Arg(100_M);
 
-auto bm_cuda_tensor2f_view_zip = bm_tensor_view_zip2<cuda::tensor<float, 2>>;
-BENCHMARK(bm_cuda_tensor2f_view_zip)->Arg(10_K);
+// if no use lambda , it does not work in cuda.
+// auto bm_cuda_tensor2f_view_zip = bm_tensor_view_zip2<cuda::tensor<float, 2>>;
+// BENCHMARK(bm_cuda_tensor2f_view_zip)->Arg(10_K);
 
 auto bm_cuda_tensor2f_view_eye = bm_tensor_view_eye<cuda::tensor<float, 2>>;
 BENCHMARK(bm_cuda_tensor2f_view_eye)->Arg(10_K);
